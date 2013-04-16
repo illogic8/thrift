@@ -1,9 +1,11 @@
 Thrift::Application.routes.draw do
   resources :users
   resources :profiles
-
+  resources :sessions, only: [:new, :create, :destroy]
 
   match '/plan', to: 'profiles#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   get "static_pages/about"
   
