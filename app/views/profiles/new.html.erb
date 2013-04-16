@@ -1,0 +1,32 @@
+<h1>New Giving Plan</h1>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@profile) do |f| %>
+		<h3>Giving Goals</h3>
+		<p>I want to donate <%= f.text_field :percentage %> % of my 2013 income.</p>
+		<h3>Giving Preferences</h3>
+		<p>Geography</p>
+			<ul>
+				<li>Local</li>
+				<li>Statewide</li>
+				<li>National</li>
+				<li>International</li>
+			</ul>
+
+		<p>Issues</p>
+			<p>the issues should probably be some sort of tag system</p>
+		<p>Organization Type</p>
+			<ul>
+				<li>Direct Services</li>
+				<li>Political Advocacy</li>
+				<li>Community Organizing</li>
+			</ul>
+			<ul>
+				<li>Large and Established</li>
+				<li>Experimental/Innovative</li>
+			</ul>	
+		<%= f.submit "Create my plan", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>
